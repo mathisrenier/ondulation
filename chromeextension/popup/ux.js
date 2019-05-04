@@ -1,13 +1,34 @@
 
-
-function powerClick()
+// change image of the power button when clicked
+document.addEventListener('DOMContentLoaded', function ()
 {
-  let x = document.getElementById('powerImg').src;
-  if (document.getElementById('powerImg').src == 'file:///Users/mathisrenier/Documents/workspace/ondulation/ondulation/chromeExtension/popup/images/powerOn.png')
+  var powerButton = document.getElementById('powerOnOff');
+  powerButton.onclick = function ()
   {
-    document.getElementById('powerImg').src = './images/powerOff.png';
-  }else
+    if (document.getElementById('powerImg').getAttribute('src') == './images/powerOn.png')
+    {
+      document.getElementById('powerImg').src = './images/powerOff.png';
+    }else
+    {
+      document.getElementById('powerImg').src = './images/powerOn.png';
+    }
+  };
+});
+
+// Open links in an active new tab
+document.addEventListener('DOMContentLoaded', function ()
+{
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++)
   {
-    document.getElementById('powerImg').src = './images/powerOn.png';
+    (function ()
+    {
+      var ln = links[i];
+      var location = ln.href;
+      ln.onclick = function ()
+      {
+          chrome.tabs.create({ active: true, url: location });
+      };
+    })();
   }
-}
+});

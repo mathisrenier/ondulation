@@ -7,10 +7,10 @@ body {
   margin-left: 1em;
   margin-right: 1em;
   margin-top: 1em;
-  margin-bottom: 0;
+  margin-bottom: 1em;
   min-width: 23em;
   font-family: 'Lucida Grande', 'Segoe UI', Tahoma, 'DejaVu Sans', Arial, sans-serif;
-  font-size: 75%;
+  font-size: 90%;
   color: #fff;
 }
 
@@ -23,7 +23,7 @@ img.logo {
   display: block;
   margin-left: 0;
   margin-right: auto;
-  width: 35%;
+  width: 45%;
 }
 
 button.btnPower {
@@ -32,7 +32,7 @@ button.btnPower {
   margin-left: auto;
   margin-right: auto;
   cursor: pointer;
-  width: 25%;
+  width: 30%;
 }
 
 button.btnPower:hover {
@@ -46,10 +46,25 @@ img.power {
   width: 100%;
 }
 
-div.vote {
+button.vote {
   background-color: #007e81;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  cursor: pointer;
+  width: 100%;
+  font-size: 100%;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+  color: #fff;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
 
-
+button.vote:hover {
+  background-color: #0e999c;
 }
 
 /* remove blue border when button clicked */

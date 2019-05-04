@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>Ondulation</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
     <script src="ux.js"></script>
   </head>
@@ -23,8 +24,8 @@
     <!-- ON/OFF BUTTON -->
     <div>
 
-      <button type="button" name="button" onclick="powerClick()" class="btnPower">
-        <img src="./images/powerOff.png" class="power" id="powerImg">
+      <button type="button" name="btnPower" id="powerOnOff" class="btnPower">
+        <img src="./images/powerOn.png" class="power" id="powerImg">
       </button>
 
       <br>
@@ -33,9 +34,14 @@
     </div>
 
     <!-- VOTE SECTION -->
-    <div class="vote">
+    <div>
 
-      <h2>VOTE NOW!</h2>
+      <a href="https://twitter.com">
+        <button type="button" name="btnVote" class="vote">
+          <i class="fas fa-vote-yea"></i>
+          VOTE NOW!
+        </button>
+      </a>
 
     </div>
 
